@@ -11,9 +11,8 @@ df = df[vote_cols]
 # Get how many ranks were available to give
 n_ranks = len(vote_cols)
 
-scores = defaultdict(int)
-
 # Assuming first column is highest rank
+scores = defaultdict(int)
 for i, col in enumerate(df.columns):
     points = n_ranks - i
     for candidate in df[col]:
