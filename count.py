@@ -19,6 +19,7 @@ for i, col in enumerate(df.columns):
     for candidate in df[col]:
         scores[candidate] += points
 
+# Sort candidates by score, descending
 ranking = sorted(scores.items(), key=lambda i: i[1], reverse=True)
 for cand, score in ranking:
     print(cand, score)
